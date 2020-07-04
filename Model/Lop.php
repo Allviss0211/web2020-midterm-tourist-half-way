@@ -29,7 +29,7 @@ class Lop
 	}
 	function GetLop()
 	{
-		$sql="Select Lop.MaLop,TenLop,TenKhoa from Lop join Khoa on Lop.MaKhoa=Khoa.MaKhoa";
+		$sql="Select MaLop,TenLop from Lop";
 		return $this->da->FetchAll($sql); 
 	}
 	function __destruct()
