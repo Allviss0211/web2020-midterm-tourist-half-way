@@ -12,9 +12,9 @@ class SinhVien
 		$sql="INSERT into SinhVien(MaSV,HoTen,NgaySinh,Email,MaLop) values($MaSV,'$HoTen','$NgaySinh','$Email',$MaLop)";
 		return $this->da->ExecuteQuery($sql);
 	}
-	function UpdateSinhVien($MaSV,$HoTen,$NgaySinh,$Email,$MaLop)
+	function UpdateSinhVien($MaSVCurr,$MaSV,$HoTen,$NgaySinh,$Email,$MaLop)
 	{
-		$sql="UPDATE SinhVien set MaSV=$MaSV,HoTen='$HoTen',NgaySinh='$NgaySinh',Email='$Email', MaLop=$MaLop where MaSV=$MaSV";
+		$sql="UPDATE SinhVien set MaSV=$MaSV,HoTen='$HoTen',NgaySinh='$NgaySinh',Email='$Email', MaLop=$MaLop where MaSV=$MaSVCurr";
 		return $this->da->ExecuteQuery($sql);
 	}
 	function DeleteSinhVien($MaSV)
@@ -34,7 +34,7 @@ class SinhVien
 	}
 	function GetSinhVienManage()
 	{
-		$sql="SELECT MaSV,SinhVien.MaLop,MaSV,HoTen,NgaySinh,Email,MaLop from SinhVien join Lop on SinhVien.MaLop = Lop.MaLop";
+		$sql="SELECT MaSV,SinhVien.MaLop,HoTen,NgaySinh,Email,TenLop from SinhVien join Lop on SinhVien.MaLop = Lop.MaLop";
 		return $this->da->FetchAll($sql);
 	}
 	function GetSinhVienByLop($MaLop)
