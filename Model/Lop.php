@@ -19,7 +19,7 @@ class Lop
 	}
 	function UpdateLop($MaLopCurr,$MaLop,$TenLop,$MaKhoa)
 	{
-		$sql="Update Lop set MaLop=$MaLop,TenLop='$TenLop',MaKhoa=$MaKhoa " where MaLop=$MaLopCurr";
+		$sql="Update Lop set MaLop=$MaLop,TenLop='$TenLop',MaKhoa=$MaKhoa where MaLop=$MaLopCurr";
 		return $this->da->ExecuteQuery($sql);
 	}
 	function GetLopByMaLop($MaLop)

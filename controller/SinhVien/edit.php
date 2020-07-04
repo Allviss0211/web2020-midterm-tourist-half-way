@@ -1,36 +1,23 @@
-<div>
-<h2><a href="admin.php?act=edit&id=<?php echo $id?>">Chỉnh sửa sinh viên</a></h2>
-<form action="admin.php?act=edit&id=<?php echo $id?>" method="post">
-<p><label>Tên sinh viên</label><input readonly="readonly" type="text" name="txtTenSV" id="txtTenSV" value="<?php echo $row['HoTen']; ?>"/></p>
-    <p><label>Khoa</label>
-        <select name="slKhoa">
-            <?php
-				foreach($ret as $rowgroup)
-				{
-					if($rowgroup['MaKhoa']==$row['MaKhoa'])
-					{
-						echo "<option value=\"$rowgroup[MaKhoa]\" selected=\"selected\" >$rowgroup[TenKhoa]</option>";
-					}
-					else
-						echo "<option value=\"$rowgroup[MaKhoa]\" >$rowgroup[TenKhoa]</option>";
-				}
-			?>
-        </select></p>
-        <p><label>Lớp</label>
-        <select name="slLop">
-            <?php
-				foreach($ret as $rowgroup)
-				{
-					if($rowgroup['MaLop']==$row['MaLop'])
-					{
-						echo "<option value=\"$rowgroup[MaLop]\" selected=\"selected\" >$rowgroup[TenLop]</option>";
-					}
-					else
-						echo "<option value=\"$rowgroup[MaLop]\" >$rowgroup[TenLop]</option>";
-				}
-			?>
-        </select></p>
-        <p><label>&nbsp;</label><input type="submit" name="btnChange" id="btnChange" value="Đổi thông tin" /></p>
-   
-</form>
-</div>
+<?php
+    ob_start();
+    include_once("Model/SinhVien.php");
+    $sinhvien = new SinhVien();
+
+    include_once("Model/Lop.php");
+    $dslop = new Lop();
+    $lop = $dslop->GetLop();
+
+    if(isset($_GET['MaSV']))
+	{
+		$id=$_GET['MaSV'];
+		$row=$sinhvien->GetSinhVienByMaSV($id);
+		include_once("view/SinhVien/edit.php");
+		if(isset($_POST['btnChange']))
+		{
+			$tenSV=$_POST["txtTenSV"];
+			$khoa=$_POST["slKhoa"];
+			$lop=$_POST["slLop"];
+		}
+	}
+	ob_end_flush();
+?>
