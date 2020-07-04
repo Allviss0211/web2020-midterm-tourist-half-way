@@ -1,13 +1,19 @@
-<div>
-<h2><a href="admin.php?mod=sinhvien&act=manage">Quản lý sinh viên</a></h2>
+ <!-- Article -->
+ <div>
+<h2><span><a href="admin.php?mod=sinhvient&act=manage">Quản lý sinh vien</a></span></h2>
 <p>
-<table border = '1'>
-<tr>
-    <td>MSSV</td>
-    <td>Tên sinh viên</td>
-    <td>Lớp</td>
-</tr>
-<?php
+	<table class="table table-striped table-dark">
+    <tr class="title">
+        <th>Mã SV</th>
+        <th>Họ tên</th>
+        <th>Ngày sinh</th>
+        <th>Email</th>
+        <th>Lớp</th>
+        <td>Xóa</td>
+        <td>Sửa</td>
+    </tr>
+    <?php
+	$count = 0;
     include_once("../../Model/Sinhvien.php");
     $sinhvien = new SinhVien();
     $ret = $sinhvien->GetSinhVienManage();

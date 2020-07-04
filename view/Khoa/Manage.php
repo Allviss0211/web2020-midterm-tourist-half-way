@@ -15,6 +15,9 @@
 	foreach($ret as $row)
 	{
 		$count++;
+        include_once("../../Model/Khoa.php");
+        $sinhvien = new Khoa();
+        $ret = $sinhvien->GetKhoa();
 		if($count%2==0)
 		{
 			echo "<tr class=\"color\"><td>";
