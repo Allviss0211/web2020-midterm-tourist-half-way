@@ -4,7 +4,7 @@ class DataAccess
 	private $link;//bien ket noi csdl
 	function __construct()
 	{
-		$this->link=mysqli_connect("localhost","root","","qlSinhVien");
+		$this->link=mysqli_connect("localhost","root","","qlsinhVien");
 	}
 	function ExecuteQuery($sql)
 	{
