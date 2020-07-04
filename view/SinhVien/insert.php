@@ -1,7 +1,7 @@
 <!-- Article --><div class="article">
-<h2><span><a href="admin.php?mod=SinhVien&act=insert">Thêm sinh viên</a></span></h2>
+<h2><span><a href="admin.php?mod=sinhvien&act=insert">Thêm sinh viên</a></span></h2>
   <p>
-  	<form class="form" method="post" action="admin.php?mod=SinhVien&act=insert" enctype="multipart/form-data">
+  	<form class="form" method="post" action="admin.php?mod=sinvien&act=insert" enctype="multipart/form-data">
         <p><label>Tên sinh viên (*)</label><input type="text" name="txtTenSV" id="txtTenSV" /></p>
         <p><label>Khoa (*)</label>
         <select name="slKhoa">

@@ -1,6 +1,6 @@
 <div>
-<h2><a href="admin.php?mod=SinhVien&act=edit&id=<?php echo $id?>">Chỉnh sửa sinh viên</a></h2>
-<form action="admin.php?mod=SinhView&act=edit&id=<?php echo $id?>" method="post">
+<h2><a href="admin.php?mod=sinhview&act=edit&id=<?php echo $id?>">Chỉnh sửa sinh viên</a></h2>
+<form action="admin.php?mod=sinhview&act=edit&id=<?php echo $id?>" method="post">
 <p><label>Tên sinh viên</label><input readonly="readonly" type="text" name="txtTenSV" id="txtTenSV" value="<?php echo $row['HoTen']; ?>"/></p>
     <p><label>Khoa</label>
         <select name="slKhoa">
