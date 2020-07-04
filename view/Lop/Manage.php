@@ -12,6 +12,9 @@
     </tr>
     <?php
 	$count = 0;
+    include_once("../../Model/Lop.php");
+    $sinhvien = new Lop();
+    $ret = $sinhvien->GetLop();
 	foreach($ret as $row)
 	{
 		$count++;
