@@ -19,7 +19,7 @@ class Khoa
 	}
 	function UpdateKhoa($MaKhoaCurr,$MaKhoa,$TenKhoa,$NamThanhLap)
 	{
-		$sql="Update Khoa set MaKhoa=$MaKhoa,TenKhoa='$TenKhoa',NamThanhLap=$NamThanhLap " where MaKhoa=$MaKhoaCurr";
+		$sql="Update Khoa set MaKhoa=$MaKhoa,TenKhoa='$TenKhoa',NamThanhLap=$NamThanhLap where MaKhoa=$MaKhoaCurr";
 		return $this->da->ExecuteQuery($sql);
 	}
 	function GetKhoaByMaKhoa($MaKhoa)
