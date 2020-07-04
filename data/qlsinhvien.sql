@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2020 at 04:09 AM
+-- Generation Time: Jul 04, 2020 at 04:39 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -42,7 +42,13 @@ INSERT INTO `ketqua` (`MaKQ`, `MaMH`, `MaSV`, `Diem`) VALUES
 (1, 1, 1, 10),
 (2, 7, 2, 10),
 (3, 4, 3, 10),
-(4, 7, 4, 10);
+(4, 7, 4, 10),
+(5, 7, 5, 10),
+(6, 3, 7, 9),
+(7, 10, 10, 10),
+(8, 9, 9, 10),
+(9, 6, 3, 9),
+(10, 5, 4, 8);
 
 -- --------------------------------------------------------
 
@@ -63,7 +69,14 @@ CREATE TABLE `khoa` (
 INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`, `NamThanhLap`) VALUES
 (1, 'Công nghệ thông tin', 1999),
 (2, 'Toán', 1974),
-(3, 'Hóa', 1982);
+(3, 'Hóa', 1982),
+(4, 'Lý', 1234),
+(5, 'Tiếng Anh', 1357),
+(6, 'Du lịch', 2000),
+(7, 'Tiếng Trung', 1998),
+(8, 'Công nghệ Sinh học', 1999),
+(9, 'Tiếng Hàn', 1888),
+(10, 'Tiếng Pháp', 1800);
 
 -- --------------------------------------------------------
 
@@ -119,7 +132,10 @@ INSERT INTO `monhoc` (`MaMH`, `TenMon`, `SoTC`) VALUES
 (4, 'Toán đại cương 1', 4),
 (5, 'Toán đại cương 2', 4),
 (6, 'Hóa đại cương 1', 4),
-(7, 'Hóa cao cấp 1', 4);
+(7, 'Hóa cao cấp 1', 4),
+(8, 'Giải tích', 3),
+(9, 'Đại số tuyến tính', 3),
+(10, 'Xác suất thống kê và ứng dụng', 4);
 
 -- --------------------------------------------------------
 
@@ -144,7 +160,12 @@ INSERT INTO `sinhvien` (`MaSV`, `Hoten`, `NgaySinh`, `Email`, `MaLop`) VALUES
 (2, 'Phùng Tiến Đạt', '2020-07-09', 'dat@gmail.com', 3),
 (3, 'Lý Mỹ Như', '2020-07-16', 'nhu@gmail.com', 8),
 (4, 'Trần Thanh Hùng', '2020-07-23', 'hung@gmail.com', 12),
-(5, 'Trịnh Kim Chi', '2020-07-17', 'chi@gmail.com', 10);
+(5, 'Trịnh Kim Chi', '2020-07-17', 'chi@gmail.com', 10),
+(6, 'Phạm Thị Thanh Thảo', '2020-07-28', 'thao@gmail.com', 13),
+(7, 'Hồ Thị Kim Hà', '2020-07-01', 'ha@gmail.com', 4),
+(8, 'Ngụy Thế Dương', '2020-07-31', 'duong@gmail.com', 7),
+(9, 'Võ Tuấn Hào', '2020-07-12', 'hao@gmail.com', 2),
+(10, 'Huỳnh Đức Cường', '2020-07-23', 'cuong@gmail.com', 5);
 
 --
 -- Indexes for dumped tables
@@ -192,13 +213,13 @@ ALTER TABLE `sinhvien`
 -- AUTO_INCREMENT for table `ketqua`
 --
 ALTER TABLE `ketqua`
-  MODIFY `MaKQ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `MaKQ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `khoa`
 --
 ALTER TABLE `khoa`
-  MODIFY `MaKhoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `MaKhoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `lop`
@@ -210,13 +231,13 @@ ALTER TABLE `lop`
 -- AUTO_INCREMENT for table `monhoc`
 --
 ALTER TABLE `monhoc`
-  MODIFY `MaMH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `MaMH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `sinhvien`
 --
 ALTER TABLE `sinhvien`
-  MODIFY `MaSV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `MaSV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
