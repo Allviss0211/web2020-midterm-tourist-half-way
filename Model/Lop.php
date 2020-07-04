@@ -1,6 +1,6 @@
 <?php
 include_once("DataAccess.php");
-class Khoa
+class Lop
 {
 	private $da;
 	function __construct()
