@@ -12,6 +12,9 @@
     </tr>
     <?php
 	$count = 0;
+    include_once("../../Model/MonHoc.php");
+    $sinhvien = new MonHoc();
+    $ret = $sinhvien->GetMonHoc();
 	foreach($ret as $row)
 	{
 		$count++;
