@@ -4,16 +4,19 @@
 <p>
 	<table class="table table-striped table-dark">
     <tr class="title">
-        <th>Ma SV</th>
-        <th>Ho ten</th>
-        <th>Ngay sinh</th>
+        <th>Mã SV</th>
+        <th>Họ tên</th>
+        <th>Ngày sinh</th>
         <th>Email</th>
-        <th>MaLop</th>
+        <th>Lớp</th>
         <td>Xóa</td>
         <td>Sửa</td>
     </tr>
     <?php
 	$count = 0;
+    include_once("../../Model/Sinhvien.php");
+    $sinhvien = new SinhVien();
+    $ret = $sinhvien->GetSinhVienManage();
 	foreach($ret as $row)
 	{
 		$count++;

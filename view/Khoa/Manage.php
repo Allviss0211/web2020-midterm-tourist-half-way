@@ -4,9 +4,9 @@
 <p>
 	<table class="table table-striped table-dark">
     <tr class="title">
-        <th>Ma Khoa</th>
-        <th>Ten Khoa</th>
-        <th>Nam Thanh lap</th>
+        <th>Mã Khoa</th>
+        <th>Tên Khoa</th>
+        <th>Năm Thành lập</th>
         <td>Xóa</td>
         <td>Sửa</td>
     </tr>
@@ -15,6 +15,9 @@
 	foreach($ret as $row)
 	{
 		$count++;
+        include_once("../../Model/Khoa.php");
+        $sinhvien = new Khoa();
+        $ret = $sinhvien->GetKhoa();
 		if($count%2==0)
 		{
 			echo "<tr class=\"color\"><td>";
