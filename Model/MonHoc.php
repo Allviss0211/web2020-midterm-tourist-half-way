@@ -19,7 +19,7 @@ class MonHoc
 	}
 	function UpdateMonHoc($MaMHCurr,$MaMH,$TenMon,$SoTC)
 	{
-		$sql="Update MonHoc set MaMH=$MaMH,TenMon='$TenMon',SoTC=$SoTC " where MaMH=$MaMHCurr";
+		$sql="Update MonHoc set MaMH=$MaMH,TenMon='$TenMon',SoTC=$SoTC where MaMH=$MaMHCurr";
 		return $this->da->ExecuteQuery($sql);
 	}
 	function GetMonHocByMaMH($MaMH)
